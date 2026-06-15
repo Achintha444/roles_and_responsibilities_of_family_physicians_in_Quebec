@@ -39,7 +39,7 @@
   </header>
 
   <!-- Master Layout -->
-  <div class="app-container" id="main-layout">
+  <div class="app-container fullscreen-slides" id="main-layout">
     
     <!-- Presentation Viewport (Left Side) -->
     <main class="presentation-view">
@@ -88,20 +88,7 @@
             </div>
           </div>
           <div class="slide-right">
-            <div class="interactive-flow-widget">
-              <div class="flow-step" onclick="highlightWidgetStep(1)">
-                <span class="step-badge">1</span>
-                <span class="step-text">Évaluation des symptômes</span>
-              </div>
-              <div class="flow-step" onclick="highlightWidgetStep(2)">
-                <span class="step-badge">2</span>
-                <span class="step-text">Diagnostic de la maladie</span>
-              </div>
-              <div class="flow-step" onclick="highlightWidgetStep(3)">
-                <span class="step-badge">3</span>
-                <span class="step-text">Prescription & conseils</span>
-              </div>
-            </div>
+            <img src="images/doctor_responsibilities.png" alt="Médecin de famille rédigeant une ordonnance dans son bureau">
           </div>
         </section>
 
@@ -122,10 +109,7 @@
             </div>
           </div>
           <div class="slide-right">
-            <div style="font-size: 5rem; text-align: center; color: var(--color-primary); display: flex; flex-direction: column; align-items: center; justify-content: center; height:100%;">
-              <i data-lucide="shield-check" style="width: 100px; height: 100px; stroke-width: 1.5;"></i>
-              <span style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 1rem;">Prévenir & Guérir</span>
-            </div>
+            <img src="images/prevention_followup.png" alt="Médecin de famille administrant un vaccin à un patient">
           </div>
         </section>
 
@@ -179,10 +163,28 @@
               <p>Le temps d'attente sur la liste gouvernementale peut parfois être très long (plusieurs mois ou années).</p>
             </div>
           </div>
-          <div class="slide-right">
-            <div style="font-size: 5rem; text-align: center; color: var(--color-warning); display: flex; flex-direction: column; align-items: center; justify-content: center; height:100%;">
-              <i data-lucide="hourglass" style="width: 100px; height: 100px; stroke-width: 1.5; animation: spin 8s linear infinite;"></i>
-              <span style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 1rem;">Temps d'attente</span>
+          <div class="slide-right" style="flex-direction: column; gap: 0.5rem; justify-content: center;">
+            <div class="interactive-flow-widget" style="background: var(--bg-glass); border: 1px solid var(--border-glass); padding: 0.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-glass); width: 100%;">
+              <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; font-size: 0.85rem; text-align: center; font-family: var(--font-heading);">Guichet d'accès (GAMF)</div>
+              <div style="background: var(--color-primary-light); border-radius: var(--radius-sm); padding: 0.4rem; font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-glass); margin-bottom: 0.4rem;">
+                <span style="color: var(--text-primary); font-weight: 500;">Statut d'inscription</span>
+                <span style="background: var(--color-warning); color: #78350f; font-weight: 700; padding: 2px 8px; border-radius: 10px; font-size: 0.65rem;">En attente d'attribution</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; margin-bottom: 0.15rem;">Options alternatives au Québec</div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; padding: 0.3rem 0.2rem; border-bottom: 1px solid var(--border-glass);">
+                  <span>Guichet d'accès (GAP)</span>
+                  <span style="color: var(--color-success); font-weight: 600;">Orientation 811</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; padding: 0.3rem 0.2rem; border-bottom: 1px solid var(--border-glass);">
+                  <span>Clinique Sans Rendez-vous</span>
+                  <span style="color: var(--color-accent); font-weight: 600;">Portail Clic Santé</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; padding: 0.3rem 0.2rem;">
+                  <span>Info-Santé / Info-Social</span>
+                  <span style="color: var(--color-primary); font-weight: 600;">Ligne 811</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -221,9 +223,28 @@
             </ul>
           </div>
           <div class="slide-right">
-            <div style="font-size: 5rem; text-align: center; color: var(--color-success); display: flex; flex-direction: column; align-items: center; justify-content: center; height:100%;">
-              <i data-lucide="users" style="width: 100px; height: 100px; stroke-width: 1.5;"></i>
-              <span style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 1rem;">Santé Communautaire</span>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%;">
+              <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-md); padding: 0.5rem 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                <i data-lucide="shield" style="color: var(--color-success); width: 22px; height: 22px; flex-shrink: 0;"></i>
+                <div style="text-align: left;">
+                  <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Prévention précoce</h4>
+                  <p style="font-size: 0.7rem; color: var(--text-secondary);">Détecter et soigner rapidement les maladies.</p>
+                </div>
+              </div>
+              <div style="background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: var(--radius-md); padding: 0.5rem 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                <i data-lucide="heart-pulse" style="color: var(--color-accent); width: 22px; height: 22px; flex-shrink: 0;"></i>
+                <div style="text-align: left;">
+                  <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Suivi personnalisé</h4>
+                  <p style="font-size: 0.7rem; color: var(--text-secondary);">Une relation de confiance patient-médecin durable.</p>
+                </div>
+              </div>
+              <div style="background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: var(--radius-md); padding: 0.5rem 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
+                <i data-lucide="git-merge" style="color: var(--color-accent-purple); width: 22px; height: 22px; flex-shrink: 0;"></i>
+                <div style="text-align: left;">
+                  <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Orientation d'experts</h4>
+                  <p style="font-size: 0.7rem; color: var(--text-secondary);">Accès coordonné et efficace aux spécialistes.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -243,9 +264,14 @@
             </div>
           </div>
           <div class="slide-right">
-            <div style="font-size: 5rem; text-align: center; color: var(--color-primary); display: flex; flex-direction: column; align-items: center; justify-content: center; height:100%;">
-              <i data-lucide="message-square" style="width: 100px; height: 100px; stroke-width: 1.5;"></i>
-              <span style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-top: 1rem;">Questions / Réponses</span>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%;">
+              <div style="background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-glass); width: 100%; max-width: 260px;">
+                <div style="background: var(--color-primary-light); color: var(--color-primary); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+                  <i data-lucide="help-circle" style="width: 28px; height: 28px;"></i>
+                </div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Des questions ?</h3>
+                <p style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">C'est le moment d'échanger avec votre auditoire et de partager vos impressions.</p>
+              </div>
             </div>
           </div>
         </section>

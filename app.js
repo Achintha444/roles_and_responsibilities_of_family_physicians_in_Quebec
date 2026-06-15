@@ -390,6 +390,9 @@ function init() {
   // Load Lucide Icons
   lucide.createIcons();
 
+  // Hide the side panel by default on startup
+  presenterSidebar.style.display = 'none';
+
   // Populate dynamic views
   updateSlides();
   initializeGlossary();
