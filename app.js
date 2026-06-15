@@ -55,9 +55,16 @@ const slidesSpeech = [
 
   // Slide 9
   `En conclusion, <b>les médecins de famille jouent un rôle essentiel au Québec</b>. Ils soignent, conseillent et accompagnent les patients dans les moments faciles comme difficiles. Ils sont indispensables pour notre qualité de vie. 
-  Je pense qu'il est important de soutenir notre système de santé pour que tout le monde puisse avoir accès à un médecin rapidement. 
-  Je vous remercie beaucoup pour votre attention et votre écoute. 
-  Maintenant, avez-vous des questions ou des commentaires ?`
+  Je pense qu'il est important de soutenir notre système de santé pour que tout le monde puisse avoir accès à un médecin rapidement.`,
+
+  // Slide 10
+  `Maintenant, nous passons à la période de questions. 
+  Avez-vous des questions sur les rôles des médecins de famille, sur la liste d'attente du GAMF, ou sur d'autres aspects de la santé au Québec ? 
+  Je serais ravi de répondre à vos questions ou d'écouter vos commentaires.`,
+
+  // Slide 11
+  `Pour terminer, je tiens à vous remercier sincèrement pour votre attention et votre écoute active durant toute la présentation. 
+  Merci beaucoup et bonne fin de journée !`
 ];
 
 // Vocabulary dictionary with translation and phonetic helper

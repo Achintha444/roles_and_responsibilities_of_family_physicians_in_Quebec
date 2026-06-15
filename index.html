@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <!-- Lucide Icons for clean visuals -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
 
   <!-- App Header -->
@@ -19,15 +21,16 @@
         <p>Présentation de Français A2</p>
       </div>
     </div>
-    
+
     <div class="header-controls">
       <!-- Dark/Light Theme Toggle -->
       <button id="theme-toggle" class="btn-icon" title="Changer de thème" aria-label="Changer de thème">
         <i data-lucide="sun"></i>
       </button>
-      
+
       <!-- Toggle Sidebar/Presenter Mode -->
-      <button id="sidebar-toggle" class="btn-icon" title="Afficher/Masquer le panneau d'étude" aria-label="Afficher/Masquer le panneau d'étude">
+      <button id="sidebar-toggle" class="btn-icon" title="Afficher/Masquer le panneau d'étude"
+        aria-label="Afficher/Masquer le panneau d'étude">
         <i data-lucide="sidebar"></i>
       </button>
 
@@ -40,12 +43,12 @@
 
   <!-- Master Layout -->
   <div class="app-container fullscreen-slides" id="main-layout">
-    
+
     <!-- Presentation Viewport (Left Side) -->
     <main class="presentation-view">
-      
+
       <div class="slide-viewport" id="slide-viewport">
-        
+
         <!-- Slide 1: Title -->
         <section class="slide active slide-title-layout" data-slide="1">
           <div class="slide-left">
@@ -88,7 +91,8 @@
             </div>
           </div>
           <div class="slide-right">
-            <img src="images/doctor_responsibilities.png" alt="Médecin de famille rédigeant une ordonnance dans son bureau">
+            <img src="images/doctor_responsibilities.png"
+              alt="Médecin de famille rédigeant une ordonnance dans son bureau">
           </div>
         </section>
 
@@ -117,8 +121,9 @@
         <section class="slide" data-slide="5">
           <div class="slide-left">
             <h2>Les références aux spécialistes</h2>
-            <p style="margin-bottom: 1rem; font-size: 1.05rem;">Parfois, un patient a besoin d'un suivi plus pointu. Le médecin de famille le réfère alors à :</p>
-            
+            <p style="margin-bottom: 1rem; font-size: 1.05rem;">Parfois, un patient a besoin d'un suivi plus pointu. Le
+              médecin de famille le réfère alors à :</p>
+
             <div class="interactive-specialists">
               <button class="spec-btn active" onclick="showSpecialistInfo('cardio')">
                 <i data-lucide="heart"></i>
@@ -136,16 +141,18 @@
                 <i data-lucide="activity"></i>
                 <span>Orthopédiste</span>
               </button>
-              
+
               <div class="spec-detail-box" id="spec-detail-box">
                 Sélectionnez un spécialiste pour découvrir son rôle de santé.
               </div>
             </div>
-            
-            <p style="margin-top: 1rem; font-size: 0.95rem; font-style: italic;">Le médecin de famille reste le coordinateur central des soins du patient.</p>
+
+            <p style="margin-top: 1rem; font-size: 0.95rem; font-style: italic;">Le médecin de famille reste le
+              coordinateur central des soins du patient.</p>
           </div>
           <div class="slide-right">
-            <img src="images/specialists_flow.png" alt="Diagramme reliant le médecin de famille aux spécialistes (cœur, peau, cerveau, os)">
+            <img src="images/specialists_flow.png"
+              alt="Diagramme reliant le médecin de famille aux spécialistes (cœur, peau, cerveau, os)">
           </div>
         </section>
 
@@ -160,27 +167,28 @@
             </ul>
             <div class="slide-tip" style="border-left-color: var(--color-warning);">
               <h4>Le Défi au Québec</h4>
-              <p>Le temps d'attente sur la liste gouvernementale peut parfois être très long (plusieurs mois ou années).</p>
+              <p>Le temps d'attente sur la liste gouvernementale peut parfois être très long (plusieurs mois ou années).
+              </p>
             </div>
           </div>
-          <div class="slide-right" style="flex-direction: column; gap: 0.5rem; justify-content: center;">
-            <div class="interactive-flow-widget" style="background: var(--bg-glass); border: 1px solid var(--border-glass); padding: 0.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-glass); width: 100%;">
-              <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; font-size: 0.85rem; text-align: center; font-family: var(--font-heading);">Guichet d'accès (GAMF)</div>
-              <div style="background: var(--color-primary-light); border-radius: var(--radius-sm); padding: 0.4rem; font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-glass); margin-bottom: 0.4rem;">
+          <div class="slide-right">
+            <div class="waitlist-widget">
+              <div class="waitlist-widget-title">Guichet d'accès (GAMF)</div>
+              <div class="waitlist-status-box">
                 <span style="color: var(--text-primary); font-weight: 500;">Statut d'inscription</span>
-                <span style="background: var(--color-warning); color: #78350f; font-weight: 700; padding: 2px 8px; border-radius: 10px; font-size: 0.65rem;">En attente d'attribution</span>
+                <span class="waitlist-status-badge">En attente d'attribution</span>
               </div>
               <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; margin-bottom: 0.15rem;">Options alternatives au Québec</div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; padding: 0.3rem 0.2rem; border-bottom: 1px solid var(--border-glass);">
+                <div class="waitlist-options-title">Options alternatives au Québec</div>
+                <div class="waitlist-option-row">
                   <span>Guichet d'accès (GAP)</span>
                   <span style="color: var(--color-success); font-weight: 600;">Orientation 811</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; padding: 0.3rem 0.2rem; border-bottom: 1px solid var(--border-glass);">
+                <div class="waitlist-option-row">
                   <span>Clinique Sans Rendez-vous</span>
                   <span style="color: var(--color-accent); font-weight: 600;">Portail Clic Santé</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; padding: 0.3rem 0.2rem;">
+                <div class="waitlist-option-row">
                   <span>Info-Santé / Info-Social</span>
                   <span style="color: var(--color-primary); font-weight: 600;">Ligne 811</span>
                 </div>
@@ -199,14 +207,16 @@
               <li>En ligne (via des portails comme Clic Santé).</li>
               <li>Directement sur place à l'accueil de la clinique.</li>
             </ul>
-            
+
             <div class="slide-tip">
               <h4>Avant le rendez-vous, n'oubliez pas :</h4>
-              <p>D'apporter votre <strong>carte d'assurance maladie</strong> (carte Soleil), de préparer vos questions et d'arriver à l'heure.</p>
+              <p>D'apporter votre <strong>carte d'assurance maladie</strong> (carte Soleil), de préparer vos questions
+                et d'arriver à l'heure.</p>
             </div>
           </div>
           <div class="slide-right">
-            <img src="images/appointment_calendar.png" alt="Téléphone intelligent montrant une application de réservation de calendrier médical">
+            <img src="images/appointment_calendar.png"
+              alt="Téléphone intelligent montrant une application de réservation de calendrier médical">
           </div>
         </section>
 
@@ -223,26 +233,26 @@
             </ul>
           </div>
           <div class="slide-right">
-            <div style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%;">
-              <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-md); padding: 0.5rem 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
-                <i data-lucide="shield" style="color: var(--color-success); width: 22px; height: 22px; flex-shrink: 0;"></i>
+            <div class="pillars-grid">
+              <div class="pillar-card pillar-success">
+                <i data-lucide="shield" style="color: var(--color-success);"></i>
                 <div style="text-align: left;">
-                  <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Prévention précoce</h4>
-                  <p style="font-size: 0.7rem; color: var(--text-secondary);">Détecter et soigner rapidement les maladies.</p>
+                  <h4>Prévention précoce</h4>
+                  <p>Détecter et soigner rapidement les maladies.</p>
                 </div>
               </div>
-              <div style="background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.2); border-radius: var(--radius-md); padding: 0.5rem 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
-                <i data-lucide="heart-pulse" style="color: var(--color-accent); width: 22px; height: 22px; flex-shrink: 0;"></i>
+              <div class="pillar-card pillar-accent">
+                <i data-lucide="heart-pulse" style="color: var(--color-accent);"></i>
                 <div style="text-align: left;">
-                  <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Suivi personnalisé</h4>
-                  <p style="font-size: 0.7rem; color: var(--text-secondary);">Une relation de confiance patient-médecin durable.</p>
+                  <h4>Suivi personnalisé</h4>
+                  <p>Une relation de confiance patient-médecin durable.</p>
                 </div>
               </div>
-              <div style="background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: var(--radius-md); padding: 0.5rem 0.75rem; display: flex; align-items: center; gap: 0.75rem;">
-                <i data-lucide="git-merge" style="color: var(--color-accent-purple); width: 22px; height: 22px; flex-shrink: 0;"></i>
+              <div class="pillar-card pillar-purple">
+                <i data-lucide="git-merge" style="color: var(--color-accent-purple);"></i>
                 <div style="text-align: left;">
-                  <h4 style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Orientation d'experts</h4>
-                  <p style="font-size: 0.7rem; color: var(--text-secondary);">Accès coordonné et efficace aux spécialistes.</p>
+                  <h4>Orientation d'experts</h4>
+                  <p>Accès coordonné et efficace aux spécialistes.</p>
                 </div>
               </div>
             </div>
@@ -251,28 +261,47 @@
 
         <!-- Slide 9: Conclusion -->
         <section class="slide" data-slide="9">
-          <div class="slide-left">
+          <div class="slide-left" style="justify-content: center; gap: 0.5rem;">
             <h2>Conclusion</h2>
-            <ul style="gap: 1.25rem;">
-              <li>Les médecins de famille jouent un rôle essentiel dans le système de santé québécois.</li>
-              <li>Ils soignent, conseillent et accompagnent les patients tout au long de leur vie.</li>
-              <li>Ils contribuent grandement au bien-être de la population.</li>
+            <ul>
+              <li>Les médecins de famille jouent un rôle essentiel au Québec.</li>
+              <li>Ils soignent, conseillent et accompagnent les patients.</li>
+              <li>Ils contribuent au bien-être de la population.</li>
             </ul>
-            <div style="margin-top: 2rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
-              <h3 style="font-family: var(--font-heading); color: var(--color-primary); font-size: 1.35rem; font-weight: 700;">Merci de votre attention !</h3>
-              <p style="font-size: 1.1rem; color: var(--text-primary); font-weight: 500; margin-top: 0.5rem;">Avez-vous des questions ?</p>
-            </div>
           </div>
           <div class="slide-right">
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; width: 100%;">
-              <div style="background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-glass); width: 100%; max-width: 260px;">
-                <div style="background: var(--color-primary-light); color: var(--color-primary); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
-                  <i data-lucide="help-circle" style="width: 28px; height: 28px;"></i>
-                </div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Des questions ?</h3>
-                <p style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4;">C'est le moment d'échanger avec votre auditoire et de partager vos impressions.</p>
-              </div>
+            <div class="waitlist-widget"
+              style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; align-items: center; text-align: center;">
+              <i data-lucide="award" style="width: 48px; height: 48px; color: var(--color-success);"></i>
+              <h3
+                style="font-family: var(--font-heading); color: var(--text-primary); font-size: 1.15rem; font-weight: 700;">
+                Un pilier de notre santé</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Le médecin de famille est le premier pas vers
+                une vie saine et un suivi médical de confiance au Québec.</p>
             </div>
+          </div>
+        </section>
+
+        <!-- Slide 10: Des questions ? -->
+        <section class="slide" data-slide="10">
+          <div class="slide-left" style="justify-content: center;">
+            <h2>Des questions ?</h2>
+            <p class="slide-subtitle" style="margin-bottom: 1rem;">Mais, on ne fait pas ça ici ;-)</p>
+          </div>
+          <div class="slide-right">
+            <div class="qa-card" style="padding: 1rem;">
+              <img src="images/image.jpg" alt="Des questions ?"
+                style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); object-fit: cover;">
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 11: Merci -->
+        <section class="slide slide-title-layout" data-slide="11">
+          <div class="slide-left" style="align-items: center; text-align: center; gap: 1.5rem;">
+            <h2>Merci de votre attention !</h2>
+            <img src="images/merci.png" alt="Merci !"
+              style="max-height: 600px; width: auto; border-radius: var(--radius-md); border: 1px solid var(--border-glass); box-shadow: var(--shadow-glass);">
           </div>
         </section>
 
@@ -289,12 +318,12 @@
           <button id="prev-btn" class="btn-nav" title="Diapositive précédente" aria-label="Diapositive précédente">
             <i data-lucide="chevron-left"></i>
           </button>
-          <span class="slide-indicator" id="slide-num">1 / 9</span>
+          <span class="slide-indicator" id="slide-num">1 / 11</span>
           <button id="next-btn" class="btn-nav" title="Diapositive suivante" aria-label="Diapositive suivante">
             <i data-lucide="chevron-right"></i>
           </button>
         </div>
-        
+
         <button id="toggle-presenter-view" class="btn-toggle-presenter" title="Basculer le panneau de notes">
           <i data-lucide="presentation"></i>
           <span>Mode Présentateur</span>
@@ -305,7 +334,7 @@
 
     <!-- Presenter/Study Mode Sidebar (Right Side) -->
     <aside class="presenter-panel" id="presenter-sidebar">
-      
+
       <!-- Tabs header -->
       <div class="presenter-tabs">
         <button class="tab-btn active" onclick="switchTab('script-tab')">
@@ -324,10 +353,10 @@
 
       <!-- Tab content container -->
       <div class="tab-content-container">
-        
+
         <!-- Tab 1: Speech Script (A2 Level) -->
         <div id="script-tab" class="tab-pane active">
-          
+
           <!-- Presentation Timer -->
           <div class="timer-widget">
             <span class="timer-label">Chronomètre de Parole (Cible : 5-7 min)</span>
@@ -350,24 +379,27 @@
               <i data-lucide="mic" style="color: var(--color-primary); width: 20px; height: 20px;"></i>
               Ce que vous devez dire (A2) :
             </h3>
-            
+
             <!-- Scripts for each slide (toggled by app.js) -->
             <div class="speech-text" id="speech-content">
               <!-- Content filled dynamically by JavaScript -->
             </div>
           </div>
-          
+
           <div style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
-            <p>💡 <strong>Conseil d'élocution :</strong> Ne lisez pas trop vite. Marquez des pauses après chaque point. Ajoutez des phrases personnelles pour prolonger la durée.</p>
+            <p>💡 <strong>Conseil d'élocution :</strong> Ne lisez pas trop vite. Marquez des pauses après chaque point.
+              Ajoutez des phrases personnelles pour prolonger la durée.</p>
           </div>
         </div>
 
         <!-- Tab 2: Vocabulary & Pronunciation -->
         <div id="vocab-tab" class="tab-pane">
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-            Cliquez sur le bouton de haut-parleur <i data-lucide="volume-2" style="display:inline-block; width:14px; height:14px; vertical-align:middle;"></i> pour écouter la prononciation correcte du terme.
+            Cliquez sur le bouton de haut-parleur <i data-lucide="volume-2"
+              style="display:inline-block; width:14px; height:14px; vertical-align:middle;"></i> pour écouter la
+            prononciation correcte du terme.
           </p>
-          
+
           <div class="vocab-list" id="vocab-list">
             <!-- Populated by JavaScript from DB -->
           </div>
@@ -378,7 +410,7 @@
           <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; text-align: center;">
             Entraînez votre mémoire ! Cliquez sur la carte pour la retourner et voir la traduction.
           </p>
-          
+
           <div class="flashcards-container">
             <div class="flashcard-wrapper" id="flashcard-wrapper" onclick="flipFlashcard()">
               <div class="flashcard">
@@ -388,7 +420,8 @@
                 </div>
                 <div class="flashcard-side flashcard-back">
                   <div class="flashcard-def" id="card-back-translation">Family physician</div>
-                  <div class="flashcard-ex" id="card-back-example">"Mon médecin de famille suit ma santé depuis dix ans."</div>
+                  <div class="flashcard-ex" id="card-back-example">"Mon médecin de famille suit ma santé depuis dix
+                    ans."</div>
                 </div>
               </div>
             </div>
@@ -413,4 +446,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
