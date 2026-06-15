@@ -1248,9 +1248,15 @@ header {
   margin-top: 2rem !important;
 }
 
+#slide-viewport:fullscreen .slide-title-layout .slide-left img {
+  max-height: 480px !important;
+  width: auto;
+  margin-top: 1rem !important;
+}
+
 #slide-viewport:fullscreen .qa-card {
   padding: 1.75rem !important;
-  max-width: 420px !important;
+  max-width: 650px !important;
   border-radius: var(--radius-lg) !important;
 }
 
@@ -1265,7 +1271,7 @@ header {
 }
 
 #slide-viewport:fullscreen .qa-card img {
-  max-height: 250px !important;
+  max-height: 480px !important;
   border-radius: var(--radius-md) !important;
 }
 
