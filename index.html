@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Médecins de Famille au Québec - Présentation</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons for clean visuals -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-icon">Q</div>
+      <div class="logo-text">
+        <h1>Médecins de Famille</h1>
+        <p>Présentation de Français A2</p>
+      </div>
+    </div>
+    
+    <div class="header-controls">
+      <!-- Dark/Light Theme Toggle -->
+      <button id="theme-toggle" class="btn-icon" title="Changer de thème" aria-label="Changer de thème">
+        <i data-lucide="sun"></i>
+      </button>
+      
+      <!-- Toggle Sidebar/Presenter Mode -->
+      <button id="sidebar-toggle" class="btn-icon" title="Afficher/Masquer le panneau d'étude" aria-label="Afficher/Masquer le panneau d'étude">
+        <i data-lucide="sidebar"></i>
+      </button>
+
+      <!-- Fullscreen presentation -->
+      <button id="fullscreen-btn" class="btn-icon" title="Plein écran" aria-label="Plein écran">
+        <i data-lucide="maximize"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Master Layout -->
+  <div class="app-container" id="main-layout">
+    
+    <!-- Presentation Viewport (Left Side) -->
+    <main class="presentation-view">
+      
+      <div class="slide-viewport" id="slide-viewport">
+        
+        <!-- Slide 1: Title -->
+        <section class="slide active slide-title-layout" data-slide="1">
+          <div class="slide-left">
+            <h2>Les rôles et les responsabilités des médecins de famille au Québec</h2>
+            <p class="slide-subtitle">Une présentation pour le cours de français</p>
+            <span class="presenter-name">Présenté par : Achintha Isuru</span>
+          </div>
+        </section>
+
+        <!-- Slide 2: Qu'est-ce qu'un médecin de famille ? -->
+        <section class="slide" data-slide="2">
+          <div class="slide-left">
+            <h2>Qu'est-ce qu'un médecin de famille ?</h2>
+            <ul>
+              <li>Un médecin de famille est un professionnel de la santé.</li>
+              <li>Il soigne les patients de tous les âges (bébés, adultes, aînés).</li>
+              <li>Il suit la santé des patients pendant plusieurs années.</li>
+              <li>Il est souvent le premier contact dans le système de santé.</li>
+            </ul>
+          </div>
+          <div class="slide-right">
+            <img src="images/doctor_patient.png" alt="Médecin qui parle avec son patient dans un cabinet lumineux">
+          </div>
+        </section>
+
+        <!-- Slide 3: Les principales responsabilités -->
+        <section class="slide" data-slide="3">
+          <div class="slide-left">
+            <h2>Les principales responsabilités</h2>
+            <ul>
+              <li>Examiner les patients et évaluer les symptômes.</li>
+              <li>Diagnostiquer des maladies courantes.</li>
+              <li>Prescrire des médicaments (ordonnance).</li>
+              <li>Donner des conseils sur la santé et le bien-être.</li>
+              <li>Répondre aux questions des patients.</li>
+            </ul>
+            <div class="slide-tip">
+              <h4>Exemple pratique</h4>
+              <p>Si une personne a de la fièvre, une infection ou une douleur, elle consulte son médecin de famille.</p>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div class="interactive-flow-widget">
+              <div class="flow-step" onclick="highlightWidgetStep(1)">
+                <span class="step-badge">1</span>
+                <span class="step-text">Évaluation des symptômes</span>
+              </div>
+              <div class="flow-step" onclick="highlightWidgetStep(2)">
+                <span class="step-badge">2</span>
+                <span class="step-text">Diagnostic de la maladie</span>
+              </div>
+              <div class="flow-step" onclick="highlightWidgetStep(3)">
+                <span class="step-badge">3</span>
+                <span class="step-text">Prescription & conseils</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: La prévention et le suivi médical -->
+        <section class="slide" data-slide="4">
+          <div class="slide-left">
+            <h2>La prévention et le suivi médical</h2>
+            <ul>
+              <li>Administrer des vaccins essentiels.</li>
+              <li>Faire des examens de routine (prises de sang, bilans).</li>
+              <li>Conseiller une alimentation saine et équilibrée.</li>
+              <li>Encourager l'activité physique régulière.</li>
+              <li>Suivre les maladies chroniques comme le diabète.</li>
+            </ul>
+            <div class="slide-tip">
+              <h4>Pourquoi est-ce important ?</h4>
+              <p>La prévention peut aider à éviter certaines maladies graves avant qu'elles ne se développent.</p>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div style="font-size: 5rem; text-align: center; color: var(--color-primary); display: flex; flex-direction: column; align-items: center; justify-content: center; height:100%;">
+              <i data-lucide="shield-check" style="width: 100px; height: 100px; stroke-width: 1.5;"></i>
+              <span style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 1rem;">Prévenir & Guérir</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 5: Les références aux spécialistes -->
+        <section class="slide" data-slide="5">
+          <div class="slide-left">
+            <h2>Les références aux spécialistes</h2>
+            <p style="margin-bottom: 1rem; font-size: 1.05rem;">Parfois, un patient a besoin d'un suivi plus pointu. Le médecin de famille le réfère alors à :</p>
+            
+            <div class="interactive-specialists">
+              <button class="spec-btn active" onclick="showSpecialistInfo('cardio')">
+                <i data-lucide="heart"></i>
+                <span>Cardiologue</span>
+              </button>
+              <button class="spec-btn" onclick="showSpecialistInfo('derma')">
+                <i data-lucide="sparkles"></i>
+                <span>Dermatologue</span>
+              </button>
+              <button class="spec-btn" onclick="showSpecialistInfo('psy')">
+                <i data-lucide="brain"></i>
+                <span>Psychiatre</span>
+              </button>
+              <button class="spec-btn" onclick="showSpecialistInfo('ortho')">
+                <i data-lucide="activity"></i>
+                <span>Orthopédiste</span>
+              </button>
+              
+              <div class="spec-detail-box" id="spec-detail-box">
+                Sélectionnez un spécialiste pour découvrir son rôle de santé.
+              </div>
+            </div>
+            
+            <p style="margin-top: 1rem; font-size: 0.95rem; font-style: italic;">Le médecin de famille reste le coordinateur central des soins du patient.</p>
+          </div>
+          <div class="slide-right">
+            <img src="images/specialists_flow.png" alt="Diagramme reliant le médecin de famille aux spécialistes (cœur, peau, cerveau, os)">
+          </div>
+        </section>
+
+        <!-- Slide 6: Comment trouver un médecin de famille au Québec ? -->
+        <section class="slide" data-slide="6">
+          <div class="slide-left">
+            <h2>Comment trouver un médecin de famille ?</h2>
+            <ul>
+              <li>S'inscrire sur la liste d'attente du gouvernement (le Guichet d'accès à un médecin de famille).</li>
+              <li>Chercher une clinique locale qui accepte de nouveaux patients.</li>
+              <li>Utiliser une clinique sans rendez-vous en attendant d'être assigné.</li>
+            </ul>
+            <div class="slide-tip" style="border-left-color: var(--color-warning);">
+              <h4>Le Défi au Québec</h4>
+              <p>Le temps d'attente sur la liste gouvernementale peut parfois être très long (plusieurs mois ou années).</p>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div style="font-size: 5rem; text-align: center; color: var(--color-warning); display: flex; flex-direction: column; align-items: center; justify-content: center; height:100%;">
+              <i data-lucide="hourglass" style="width: 100px; height: 100px; stroke-width: 1.5; animation: spin 8s linear infinite;"></i>
+              <span style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 1rem;">Temps d'attente</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 7: Comment prendre un rendez-vous ? -->
+        <section class="slide" data-slide="7">
+          <div class="slide-left">
+            <h2>Comment prendre un rendez-vous ?</h2>
+            <p style="margin-bottom: 1rem; font-size: 1.05rem;">Les patients peuvent réserver :</p>
+            <ul style="margin-bottom: 1.5rem;">
+              <li>Par téléphone, directement auprès de la clinique.</li>
+              <li>En ligne (via des portails comme Clic Santé).</li>
+              <li>Directement sur place à l'accueil de la clinique.</li>
+            </ul>
+            
+            <div class="slide-tip">
+              <h4>Avant le rendez-vous, n'oubliez pas :</h4>
+              <p>D'apporter votre <strong>carte d'assurance maladie</strong> (carte Soleil), de préparer vos questions et d'arriver à l'heure.</p>
+            </div>
+          </div>
+          <div class="slide-right">
+            <img src="images/appointment_calendar.png" alt="Téléphone intelligent montrant une application de réservation de calendrier médical">
+          </div>
+        </section>
+
+        <!-- Slide 8: Pourquoi les médecins de famille sont-ils importants ? -->
+        <section class="slide" data-slide="8">
+          <div class="slide-left">
+            <h2>Pourquoi sont-ils si importants ?</h2>
+            <ul>
+              <li>Ils offrent des soins médicaux accessibles et de qualité.</li>
+              <li>Ils assurent un suivi régulier et connaissent l'historique du patient.</li>
+              <li>Ils aident à prévenir et intercepter les maladies précocement.</li>
+              <li>Ils orientent efficacement les patients vers les bons spécialistes.</li>
+              <li>Ils contribuent activement à la santé globale de la population du Québec.</li>
+            </ul>
+          </div>
+          <div class="slide-right">
+            <div style="font-size: 5rem; text-align: center; color: var(--color-success); display: flex; flex-direction: column; align-items: center; justify-content: center; height:100%;">
+              <i data-lucide="users" style="width: 100px; height: 100px; stroke-width: 1.5;"></i>
+              <span style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 1rem;">Santé Communautaire</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 9: Conclusion -->
+        <section class="slide" data-slide="9">
+          <div class="slide-left">
+            <h2>Conclusion</h2>
+            <ul style="gap: 1.25rem;">
+              <li>Les médecins de famille jouent un rôle essentiel dans le système de santé québécois.</li>
+              <li>Ils soignent, conseillent et accompagnent les patients tout au long de leur vie.</li>
+              <li>Ils contribuent grandement au bien-être de la population.</li>
+            </ul>
+            <div style="margin-top: 2rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem;">
+              <h3 style="font-family: var(--font-heading); color: var(--color-primary); font-size: 1.35rem; font-weight: 700;">Merci de votre attention !</h3>
+              <p style="font-size: 1.1rem; color: var(--text-primary); font-weight: 500; margin-top: 0.5rem;">Avez-vous des questions ?</p>
+            </div>
+          </div>
+          <div class="slide-right">
+            <div style="font-size: 5rem; text-align: center; color: var(--color-primary); display: flex; flex-direction: column; align-items: center; justify-content: center; height:100%;">
+              <i data-lucide="message-square" style="width: 100px; height: 100px; stroke-width: 1.5;"></i>
+              <span style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-top: 1rem;">Questions / Réponses</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="slide-progress"></div>
+        </div>
+
+      </div>
+
+      <!-- Playback Controls -->
+      <div class="playback-controls">
+        <div class="nav-buttons">
+          <button id="prev-btn" class="btn-nav" title="Diapositive précédente" aria-label="Diapositive précédente">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <span class="slide-indicator" id="slide-num">1 / 9</span>
+          <button id="next-btn" class="btn-nav" title="Diapositive suivante" aria-label="Diapositive suivante">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+        
+        <button id="toggle-presenter-view" class="btn-toggle-presenter" title="Basculer le panneau de notes">
+          <i data-lucide="presentation"></i>
+          <span>Mode Présentateur</span>
+        </button>
+      </div>
+
+    </main>
+
+    <!-- Presenter/Study Mode Sidebar (Right Side) -->
+    <aside class="presenter-panel" id="presenter-sidebar">
+      
+      <!-- Tabs header -->
+      <div class="presenter-tabs">
+        <button class="tab-btn active" onclick="switchTab('script-tab')">
+          <i data-lucide="file-text"></i>
+          <span>Script A2</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('vocab-tab')">
+          <i data-lucide="dictionary"></i>
+          <span>Glossaire</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('flash-tab')">
+          <i data-lucide="layers"></i>
+          <span>Flashcards</span>
+        </button>
+      </div>
+
+      <!-- Tab content container -->
+      <div class="tab-content-container">
+        
+        <!-- Tab 1: Speech Script (A2 Level) -->
+        <div id="script-tab" class="tab-pane active">
+          
+          <!-- Presentation Timer -->
+          <div class="timer-widget">
+            <span class="timer-label">Chronomètre de Parole (Cible : 5-7 min)</span>
+            <span id="timer-display" class="timer-display">00:00</span>
+            <div class="timer-buttons">
+              <button id="timer-start" class="btn-timer">
+                <i data-lucide="play" style="width:16px; height:16px;"></i>
+                <span>Démarrer</span>
+              </button>
+              <button id="timer-reset" class="btn-timer">
+                <i data-lucide="rotate-ccw" style="width:16px; height:16px;"></i>
+                <span>Réinitialiser</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Speech Scripts dynamic boxes -->
+          <div class="speech-script-box">
+            <h3>
+              <i data-lucide="mic" style="color: var(--color-primary); width: 20px; height: 20px;"></i>
+              Ce que vous devez dire (A2) :
+            </h3>
+            
+            <!-- Scripts for each slide (toggled by app.js) -->
+            <div class="speech-text" id="speech-content">
+              <!-- Content filled dynamically by JavaScript -->
+            </div>
+          </div>
+          
+          <div style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+            <p>💡 <strong>Conseil d'élocution :</strong> Ne lisez pas trop vite. Marquez des pauses après chaque point. Ajoutez des phrases personnelles pour prolonger la durée.</p>
+          </div>
+        </div>
+
+        <!-- Tab 2: Vocabulary & Pronunciation -->
+        <div id="vocab-tab" class="tab-pane">
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Cliquez sur le bouton de haut-parleur <i data-lucide="volume-2" style="display:inline-block; width:14px; height:14px; vertical-align:middle;"></i> pour écouter la prononciation correcte du terme.
+          </p>
+          
+          <div class="vocab-list" id="vocab-list">
+            <!-- Populated by JavaScript from DB -->
+          </div>
+        </div>
+
+        <!-- Tab 3: Revision Flashcards Game -->
+        <div id="flash-tab" class="tab-pane">
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; text-align: center;">
+            Entraînez votre mémoire ! Cliquez sur la carte pour la retourner et voir la traduction.
+          </p>
+          
+          <div class="flashcards-container">
+            <div class="flashcard-wrapper" id="flashcard-wrapper" onclick="flipFlashcard()">
+              <div class="flashcard">
+                <div class="flashcard-side flashcard-front">
+                  <div class="flashcard-term" id="card-front-term">médecin de famille</div>
+                  <div class="flashcard-hint">Cliquez pour retourner</div>
+                </div>
+                <div class="flashcard-side flashcard-back">
+                  <div class="flashcard-def" id="card-back-translation">Family physician</div>
+                  <div class="flashcard-ex" id="card-back-example">"Mon médecin de famille suit ma santé depuis dix ans."</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flashcard-controls">
+              <button id="prev-card-btn" class="btn-flashcard" title="Carte précédente" aria-label="Carte précédente">
+                <i data-lucide="arrow-left"></i>
+              </button>
+              <span class="flashcard-idx" id="card-idx">1 / 10</span>
+              <button id="next-card-btn" class="btn-flashcard" title="Carte suivante" aria-label="Carte suivante">
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
